@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
+    "noEmitOnError": true,
+    "noUnusedParameters": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "pretty": true,
+    "target": "es5",
+    "outDir": "build"
+  },
+  "formatCodeOptions": {
+    "indentSize": 2,
+    "tabSize": 2
+  },
+  "include": [
+      "app/*"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "dist",
+    "lib",
+    "webpack",
+    "__mocks__",
+    "coverage",
+    "dev",
+    "reports"
+  ],
+  "version": "2.1.6"
+}
