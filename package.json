@@ -15,6 +15,7 @@
     "jquery": "^3.1.1"
   },
   "devDependencies": {
+    "@types/webpack": "^2.2.5",
     "bower": "^1.7.7",
     "browser-sync": "^2.18.7",
     "browser-sync-webpack-plugin": "^1.1.4",
@@ -43,6 +44,7 @@
     "start": "webpack --config webpack/webpack.dev.js --watch",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
-    "test-single-run": "karma start karma.conf.js --single-run"
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "api": "http-server ./app"
   }
 }

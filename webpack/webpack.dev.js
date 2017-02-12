@@ -6,12 +6,9 @@ var path = require('path');
 var os = require('os');
 var proxyMiddleware = require('http-proxy-middleware');
 
-var jsonPlaceholderProxy = proxyMiddleware('/phones/phones.json', {
-    target: '/api',
-    onProxyReq: function(proxyReq, req, res) {
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify([]));
-    }
+var jsonPlaceholderProxy = proxyMiddleware('/phones/', {
+    target: 'http://localhost:8080/',
+    changeOrigin: true
 });
 
 module.exports = {

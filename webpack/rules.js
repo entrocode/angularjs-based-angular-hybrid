@@ -3,8 +3,7 @@ module.exports = [
     {
         test: /\.css$/,
         use: ['style-loader','css-loader']
-    },
-    {
+    }, {
         test: /\.scss$/,
         use: ['style-loader','css-loader','sass-loader']
     }, {
@@ -25,5 +24,9 @@ module.exports = [
         test: '\.png$',
         exclude: /node_modules/,
         use: 'url-loader'
+    }, {
+        test: /\.json$/,
+        exclude: /node_modules/,
+        use: "file-loader?name=[name].[ext]&publicPath=assets/foo/&outputPath=app/phones/"
     }
 ];

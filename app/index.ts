@@ -18,3 +18,5 @@ import "./phone-list/phone-list.module.js";
 import "./phone-list/phone-list.component.js";
 import "./phone-detail/phone-detail.module.js";
 import "./phone-detail/phone-detail.component.js";
+
+require("file-loader?name=[path][name].[ext]!./phones/phones.json")
