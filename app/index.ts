@@ -3,7 +3,7 @@ import "./app.css";
 import "./app.animations.css";
 
 import "jquery/dist/jquery.js";
-import "angular/angular.js";
+import * as angular from "angular";
 import "angular-animate/angular-animate.js";
 import "angular-resource/angular-resource.js";
 import "angular-route/angular-route.js";
@@ -19,4 +19,6 @@ import "./phone-list/phone-list.component.js";
 import "./phone-detail/phone-detail.module.js";
 import "./phone-detail/phone-detail.component.js";
 
-require("file-loader?name=[path][name].[ext]!./phones/phones.json")
+require("file-loader?name=[path][name].[ext]!./phones/phones.json");
+
+angular.bootstrap(document.body, ['phonecatApp']);

@@ -10,6 +10,10 @@ var jsonPlaceholderProxy = proxyMiddleware('/phones/', {
     target: 'http://localhost:8080/',
     changeOrigin: true
 });
+var imgPlaceholderProxy = proxyMiddleware('/img/', {
+    target: 'http://localhost:8080/',
+    changeOrigin: true
+});
 
 module.exports = {
     entry: ['./app/index.ts'],
@@ -36,7 +40,7 @@ module.exports = {
             port: 8443,
             server: {
                 baseDir: 'dev',
-                middleware: [jsonPlaceholderProxy],
+                middleware: [jsonPlaceholderProxy, imgPlaceholderProxy],
             },
             https: false,
             ui: false,
