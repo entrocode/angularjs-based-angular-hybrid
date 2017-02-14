@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "declaration": true,
@@ -7,7 +8,7 @@
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "noUnusedLocals": true,
     "noImplicitThis": true,
     "noEmitOnError": true,
