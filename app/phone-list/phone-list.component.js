@@ -5,10 +5,11 @@ angular.
   module('phoneList').
   component('phoneList', {
     template: require('./phone-list.template.html'),
-    controller: ['Phone',
-      function PhoneListController(Phone) {
+    controller: ['Phone', 'downgradeableService',
+      function PhoneListController(Phone, downgradeableService) {
         this.phones = Phone.query();
         this.orderProp = 'age';
+        this.downgradeMessage = downgradeableService.getMessage();
       }
     ]
   });

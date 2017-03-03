@@ -10,11 +10,6 @@ import "angular-route/angular-route.js";
 
 import "zone.js/dist/zone";
 import "reflect-metadata";
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import {UpgradeAdapter} from '@angular/upgrade';
-// import {DowngradeableService} from './ng2/downgradeableService';
 
 import "./app.module";
 import "./app.config.js";
@@ -28,16 +23,12 @@ import "./phone-list/phone-list.component.js";
 import "./phone-detail/phone-detail.module.js";
 import "./phone-detail/phone-detail.component.js";
 
-require("file-loader?name=[path][name].[ext]!./phones/phones.json");
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {UpgradeModule} from '@angular/upgrade/static';
 
-// angular.bootstrap(document.body, ['phonecatApp']);
+import {PhonecatAppModule} from './app.module';
 
-@NgModule({
-  declarations: [],
-  imports: [BrowserModule]
-})
-class MyNg2Module {}
-
-let upgradeAdapter = new UpgradeAdapter(MyNg2Module);
-
-upgradeAdapter.bootstrap(document.body, ['phonecatApp']);
+platformBrowserDynamic().bootstrapModule(PhonecatAppModule).then(platformRef => {
+  const upgrade = platformRef.injector.get(UpgradeModule) as UpgradeModule;
+  upgrade.bootstrap(document.body, ['phonecatApp']);
+});

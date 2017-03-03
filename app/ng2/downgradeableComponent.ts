@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 @Component({
-  selector: 'hero-detail',
+  selector: 'downgradeable-component',
   template: `
-    <h2>Windstorm details!</h2>
-    <div><label>id: </label>1</div>
+    <h2>A component too!</h2>
+    <div><label>ohhh my</label></div>
   `
 })
-export class HeroDetailComponent { }
+export class DowngradeableComponent { }

@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class DowngradeableService {  
+export class DowngradeableService {
     getMessage () {
-        return 'Angular 2 service';
+        return 'WAT? Which angular is this?';
     }
 }
