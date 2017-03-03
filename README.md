@@ -1,9 +1,11 @@
-# AngularJS Phone Catalog Tutorial Application
+# Hybrid AngularJS-Angular Phone Catalog Tutorial Application
 
 
 ## Overview
 
 Using the completed tutorial from: https://docs.angularjs.org/tutorial I'm going to convert the project to webpack and add Angular (2) based components using the downgrade module.
+
+This is going to simulate upgrading a large corporate(?) app from angularjs (1.x) to angular (2)... Keep the legacy angularjs code and add new features using angular (2).  After you hit critical mass you can make the switch
 
 
 ## Prerequisites
